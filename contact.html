@@ -22,7 +22,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous"
     />
-    <!-- <link href="carousel.css" rel="stylesheet"> -->
+    <link href="res/style.css" rel="stylesheet" />
     
     <link rel='icon' href='res/phys.ico' type='image/x-icon'> <!-- little favicon shown in tabs -->
 </head>
@@ -54,6 +54,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="resources.html">Resources</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="res/Carrington_CV.pdf" target="_blank" rel="noopener">Resume</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -63,11 +66,21 @@
         <br>
         
         <div class="row featurette">
-            <h2 class="featurette-heading">Martin Carrington</h2>
+            <h1 class="featurette-heading">Contact</h1>
             <p class="lead">
                 Email:  
-                <a target="_top" href="mailto:martin [at] m_____c_________ [dot] com">martin [at] thisdomain [dot] com</a>
+                <span id="email">martin [at] thisdomain [dot] com</span>
             </p>
+            <!-- build the address at runtime so it isn't in the HTML for scrapers -->
+            <script>
+                (function () {
+                    var addr = ["martin", "martincarrington.com"].join("@");
+                    var a = document.createElement("a");
+                    a.href = "mailto:" + addr;
+                    a.textContent = addr;
+                    document.getElementById("email").replaceWith(a);
+                })();
+            </script>
             
             <p class="lead"> 
             LinkedIn: <a target="_top" href="https://www.linkedin.com/in/martin-carrington/">Profile</a>

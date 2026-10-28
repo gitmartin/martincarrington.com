@@ -1,0 +1,29 @@
+/* Site styles on top of Bootstrap. The featurette rules are adapted from
+   the Bootstrap carousel example (formerly carousel.css). */
+
+body {
+  color: #5a5a5a;
+}
+
+/* Space out the Bootstrap <hr> between sections */
+.featurette-divider {
+  margin: 3rem 0;
+}
+
+/* Thin out the section headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.05rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  h1.featurette-heading {
+    font-size: 2.75rem;
+  }
+
+  h2.featurette-heading {
+    font-size: 2.25rem;
+  }
+}
